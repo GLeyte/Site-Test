@@ -1,5 +1,6 @@
-<html lang="pt">
+<!DOCTYPE html>
 
+<html>
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -27,38 +28,79 @@
 		rel="stylesheet">
 
 	<link rel="stylesheet" href="style.css">
+<head>
 
 <head>
   <title>
-    Solucionador de equação de 2° Grau
+    Tabela de classificação
   </title>
 </head>
 
 <body>
   <div class="container">
     <h1 class="page-title">
-      Solucionador de equação de 2° Grau
+      Tabela de classificação
     </h1>
-    <h2 class="equation">
-      ax²+bx+c=0
-    </h2>
-    </p>
-    a<input type="number" id="A" />
-    b<input type="number" id="B"/>
-    c<input type="number" id="C" /><br>
-    <button type="submit" onclick="Calcular()">Calcular</button>
-    </p>
-    <h2 class="roots">
-      X1 = <span id="X1"></span>
-    </p>
-      X2 = <span id="X2"></span>
-    </h2>
-    <h2 class="extra">
-      Segura essa página de qualidade
-    </h2>
-    <img src="https://folhadirigida.com.br/blog/wp-content/uploads/2020/09/Matem%C3%A1tica-para-concursos.png" class="page-image" alt="">
+
+  <p>
+    
+  <div class="col-md-6 offset-md-3">
+    <div class="input-group">
+      <span class="input-group-btn mr-1">
+        <button class="btn btn-secondary" type="button" onclick="adicionaJogador()" id="novoJogador">Inserir</button>
+      </span>
+      <input type="text" class="form-control" placeholder="Nome do novo jogador" id="Nome" onkeydown="return /[a-z]/i.test(event.key)">
+    </div>
   </div>
+  <br>
+  <div class="row justify-content-md-center">
+    <div class="col-md-6">
+      <div class="input-group m-1">
+        <select class="form-control from mr-1" aria-label="Default select example" id="jogador1">
+          <option value="" disabled selected>Selecione o jogador 1</option>
+        </select>
+        <!-- <input type="text" class="form-control" placeholder="Jogador 1" id="jogador1" onkeydown="return /[a-z]/i.test(event.key)"> -->
+        <input type="number" class="form-control" placeholder="Pontuação 1" id="placar1">
+        <!-- <input type="text" class="form-control" placeholder="Jogador 2" id="jogador2" onkeydown="return /[a-z]/i.test(event.key)"> -->
+      </div>
+      <div class="input-group m-1">
+        <select class="form-control to mr-1" placeholder="Jogadores" aria-label="Default select example" id="jogador2">
+          <option value="" disabled selected>Selecione o jogador 2</option>
+        </select>
+        <input type="number" class="form-control" placeholder="Pontuação 2" id="placar2">
+      </div>
+      <span class="input-group-btn">
+        <button class="btn btn-secondary" type="button" onclick="adicionaPartida()">Inserir</button>
+      </span>
+    </div>
+  </div>
+
+  <br>
+  <br>
+  <table class="table table-striped table-dark">
+    <colgroup>
+      <col>
+      <col>
+      <col>
+      <col>
+      <col span="1" class="success">
+  </colgroup>
+    <thead>
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Vitórias</th>
+        <th scope="col">Empates</th>
+        <th scope="col">Derrotas</th>
+        <th scope="col">Pontos</th>
+      </tr>
+    </thead>
+    <tbody id="tabelaJogadores">
+    </tbody>
+  </table>
+
+</div>
   <script src="script.js"></script>
+
 </body>
 
 </html>

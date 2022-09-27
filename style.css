@@ -1,8 +1,9 @@
 body {
   font-family: "Roboto Mono", monospace;
   min-height: 600px;
-  background-color: #7e7a7a;
-  background-size: cover;
+  background-image: url("");
+  background-color: #bc6262;
+  background-size: 80%;
   background-position: center bottom;
   background-repeat: no-repeat;
 }
@@ -18,46 +19,18 @@ body {
   margin: 0 0 5px;
 }
 
-.equation {
-  text-align: center;
-  color: #000000;
-  margin-top: 10px;
+table {
+  border: 2px solid rgb(0, 0, 0);
+  border-collapse: collapse;
 }
 
-@media (max-height: 500px) {
-  body {
-    min-height: 800px;
-  }
+th,
+tr,
+td {
+  border: solid 1px rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
 }
 
-input {
-  margin-top: 10px;
-  padding: 4px;
-  border-radius: 5px;
-  width: 100px
-}
-
-button {
-  margin-top: 40px;
-  padding: 4px 8px;
-  border-radius: 10px;
-  background: #ffffff;
-}
-
-.roots {
-  color: #000000;
-  text-align: center;
-  margin-top: 10px;
-  font-size: 50px;
-}
-
-.extra {
-  color: #000000;
-  text-align: center;
-  margin-top: 10px;
-  font-size: 20px;
-}
-
-.page-image {
-  width: 250px;
+colgroup col.success {
+  background-color: #6e2f2f;
 }
